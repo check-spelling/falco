@@ -881,7 +881,7 @@ int falco_init(int argc, char **argv)
 		}
 		else
 		{
-#ifndef BULD_TYPE_RELEASE
+#ifndef BUILD_TYPE_RELEASE
 			conf_stream.open(FALCO_SOURCE_CONF_FILE);
 			if (conf_stream.is_open())
 			{
