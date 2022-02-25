@@ -196,13 +196,13 @@ Exception values will most commonly be defined in rules with append: true. Here'
 
 A rule exception applies if for a given event, the fields in a rule.exception match all of the values in some exception.item. For example, if a program `apk` writes to a file below `/usr/lib/alpine`, the rule will not trigger, even if the condition is met.
 
-Notice that an item in a values list can be a list. This allows building exceptions with operators like "in", "pmatch", etc. that work on a list of items. The item can also be a name of an existing list. If not present surrounding parantheses will be added.
+Notice that an item in a values list can be a list. This allows building exceptions with operators like "in", "pmatch", etc. that work on a list of items. The item can also be a name of an existing list. If not present surrounding parentheses will be added.
 
 Finally, note that the structure of the values property differs between the items where fields is a list of fields (proc_writer/container_writer/proc_filenames) and when it is a single field (procs_only). This changes how the condition snippet is constructed.
 
 ### Implementation
 
-For exception items where the fields property is a list of field names, each exception can be thought of as an implicit "and not (field1 cmp1 val1 and field2 cmp2 val2 and...)" appended to the rule's condition. For exception items where the fields property is a single field name, the exception can be thought of as an implict "and not field cmp (val1, val2, ...)". In practice, that's how exceptions will be implemented.
+For exception items where the fields property is a list of field names, each exception can be thought of as an implicit "and not (field1 cmp1 val1 and field2 cmp2 val2 and...)" appended to the rule's condition. For exception items where the fields property is a single field name, the exception can be thought of as an implicit "and not field cmp (val1, val2, ...)". In practice, that's how exceptions will be implemented.
 
 When a rule is parsed, the original condition will be wrapped in an extra layer of parentheses and all exception values will be appended to the condition. For example, using the example above, the resulting condition will be:
 
@@ -214,7 +214,7 @@ When a rule is parsed, the original condition will be wrapped in an extra layer 
 	(fd.filename in (python, go))))
 ```
 
-The exceptions are effectively syntatic sugar that allows expressing sets of exceptions in a concise way.
+The exceptions are effectively syntactic sugar that allows expressing sets of exceptions in a concise way.
 
 ### Advantages
 

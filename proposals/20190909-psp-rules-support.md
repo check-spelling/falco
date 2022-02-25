@@ -27,7 +27,7 @@ That's where Falco comes in. We want to make it possible for Falco to perform a 
 
 Transparently read a candidate PSP into an equivalent set of Falco rules that can look for the conditions in the PSP.
 
-The PSP is converted into a set of Falco rules which can be either saved as a file for later use/inspection, or loaded directly so they they can monitor system calls and k8s audit activity.
+The PSP is converted into a set of Falco rules which can be either saved as a file for later use/inspection, or loaded directly so that they can monitor system calls and k8s audit activity.
 
 ### Non-Goals
 
@@ -51,6 +51,6 @@ No diagrams yet.
 
 * We'll use [inja](https://github.com/pantor/inja) as the templating engine.
 
-* For the most part, we can rely on the existing framework of rules, filter expressions, and output expressions that already exist in Falco. One significant change will be that filter fields can extract more than one "value" per event, and we'll need to define new operators to perform set comparisions betweeen values in an event and values in the comparison right-hand-side.
+* For the most part, we can rely on the existing framework of rules, filter expressions, and output expressions that already exist in Falco. One significant change will be that filter fields can extract more than one "value" per event, and we'll need to define new operators to perform set comparisons between values in an event and values in the comparison right-hand-side.
 
 * This will rely heavily on existing support for [K8s Audit Events](https://falco.org/docs/event-sources/kubernetes-audit/) in Falco.

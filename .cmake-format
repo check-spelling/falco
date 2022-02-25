@@ -7,7 +7,7 @@ line_width = 120
 # How many spaces to tab for indent
 tab_size = 2
 
-# If arglists are longer than this, break them always
+# If arg lists are longer than this, break them always
 max_subargs_per_line = 3
 
 # If true, separate flow control names from their parentheses with a space
@@ -21,7 +21,7 @@ separate_fn_name_with_space = False
 dangle_parens = False
 
 # If the statement spelling length (including space and parenthesis is larger
-# than the tab width by more than this amoung, then force reject un-nested
+# than the tab width by more than this among, then force reject un-nested
 # layouts.
 max_prefix_chars = 2
 
@@ -54,7 +54,7 @@ always_wrap = []
 algorithm_order = [0, 1, 2, 3, 4]
 
 # If true, the argument lists which are known to be sortable will be sorted
-# lexicographicall
+# lexicographically
 enable_sort = True
 
 # If true, the parsers may infer whether or not an argument list is sortable

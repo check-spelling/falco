@@ -242,7 +242,7 @@ uint64_t do_inspect(falco_engine *engine,
 			throw sinsp_exception(inspector->getlasterr().c_str());
 		}
 
-		// Reset the timeouts counter, Falco succesfully got an event to process
+		// Reset the timeouts counter, Falco successfully got an event to process
 		timeouts_since_last_success_or_msg = 0;
 		if(duration_start == 0)
 		{
@@ -484,7 +484,7 @@ int falco_init(int argc, char **argv)
 			inspector->set_cri_socket_path(app.options().cri_socket_path);
 		}
 
-		// Decide wether to do sync or async for CRI metadata fetch
+		// Decide whether to do sync or async for CRI metadata fetch
 		inspector->set_cri_async(!app.options().disable_cri_async);
 
 		//

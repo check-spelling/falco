@@ -93,7 +93,7 @@ bool k8s_audit_handler::accept_data(falco_engine *engine,
 		}
 		catch(...)
 		{
-			errstr = string("unkown error processing audit event");
+			errstr = string("unknown error processing audit event");
 			fprintf(stderr, "%s\n", errstr.c_str());
 			return false;
 		}
@@ -130,7 +130,7 @@ bool k8s_audit_handler::handleGet(CivetServer *server, struct mg_connection *con
 	return true;
 }
 
-// The version in CivetServer.cpp has valgrind compliants due to
+// The version in CivetServer.cpp has valgrind complaints due to
 // unguarded initialization of c++ string from buffer.
 static void get_post_data(struct mg_connection *conn, std::string &postdata)
 {

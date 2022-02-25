@@ -56,7 +56,7 @@ If a rule has been violated, Falco triggers an alert.
 ### How does Falco work?
 
 Falco traces kernel events and reports information about the system calls being executed at runtime.
-Falco leverages the extended berkley packet filter (eBPF) which is a kernel feature implemented for dynamic crash-resilient and secure code execution in the kernel. 
+Falco leverages the extended berkeley packet filter (eBPF) which is a kernel feature implemented for dynamic crash-resilient and secure code execution in the kernel. 
 Falco enriches these kernel events with information about containers running on the system.
 Falco also can consume signals from other input streams such as the containerd socket, the Kubernetes API server and the Kubernetes audit log.
 At runtime, Falco will reason about these events and assert them against configured security rules.
@@ -113,7 +113,7 @@ Falco ultimately is a security engine. It reasons about signals coming from a sy
 
 ##### Anomaly detection
 
-This refers to an event that occurs with something unsual, concerning, or odd occurs.
+This refers to an event that occurs with something unusual, concerning, or odd occurs.
 We can associate anomalies with unwanted behavior, and alert in their presence.
 
 ##### Detection tooling

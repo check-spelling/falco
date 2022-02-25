@@ -8,7 +8,7 @@ Released on 2022-01-31
 
 
 * new: add support for plugins to extend Falco functionality to new event sources and custom fields [[#1753](https://github.com/falcosecurity/falco/pull/1753)] - [@mstemm](https://github.com/mstemm)
-* new: add ability to set User-Agent http header when sending http output. Provide default value of 'falcosecurit/falco'. [[#1850](https://github.com/falcosecurity/falco/pull/1850)] - [@yoshi314](https://github.com/yoshi314)
+* new: add ability to set User-Agent http header when sending http output. Provide default value of 'falcosecurity/falco'. [[#1850](https://github.com/falcosecurity/falco/pull/1850)] - [@yoshi314](https://github.com/yoshi314)
 * new(configuration): support defining plugin init config as a YAML [[#1852](https://github.com/falcosecurity/falco/pull/1852)] - [@jasondellaluce](https://github.com/jasondellaluce)
 
 
@@ -44,7 +44,7 @@ Released on 2022-01-31
 * fix(userspace/engine): support jsonpointer escaping in rule parser [[#1777](https://github.com/falcosecurity/falco/pull/1777)] - [@jasondellaluce](https://github.com/jasondellaluce)
 * fix(scripts/falco-driver-loader): support kernel object files in `.zst` and `.gz` compression formats [[#1863](https://github.com/falcosecurity/falco/pull/1863)] - [@leogr](https://github.com/leogr)
 * fix(engine): correctly format json output in json_event [[#1847](https://github.com/falcosecurity/falco/pull/1847)] - [@jasondellaluce](https://github.com/jasondellaluce)
-* fix: set http output contenttype to text/plain when json output is disabled [[#1829](https://github.com/falcosecurity/falco/pull/1829)] - [@FedeDP](https://github.com/FedeDP)
+* fix: set http output content type to text/plain when json output is disabled [[#1829](https://github.com/falcosecurity/falco/pull/1829)] - [@FedeDP](https://github.com/FedeDP)
 * fix(userspace/falco): accept 'Content-Type' header that contains "application/json", but it is not strictly equal to it [[#1800](https://github.com/falcosecurity/falco/pull/1800)] - [@FedeDP](https://github.com/FedeDP)
 * fix(userspace/engine): supporting enabled-only overwritten rules [[#1775](https://github.com/falcosecurity/falco/pull/1775)] - [@jasondellaluce](https://github.com/jasondellaluce)
 
@@ -88,7 +88,7 @@ Released on 2022-01-31
 * fix(build): use consistent 7-character build abbrev sha [[#1830](https://github.com/falcosecurity/falco/pull/1830)] - [@LucaGuerra](https://github.com/LucaGuerra)
 * add Phoenix to adopters list [[#1806](https://github.com/falcosecurity/falco/pull/1806)] - [@kaldyka](https://github.com/kaldyka)
 * remove unused files in test directory [[#1801](https://github.com/falcosecurity/falco/pull/1801)] - [@jasondellaluce](https://github.com/jasondellaluce)
-* drop Falco luajit module, use the one provied by libs [[#1788](https://github.com/falcosecurity/falco/pull/1788)] - [@FedeDP](https://github.com/FedeDP)
+* drop Falco luajit module, use the one provided by libs [[#1788](https://github.com/falcosecurity/falco/pull/1788)] - [@FedeDP](https://github.com/FedeDP)
 * chore(build): update libs version to 7906f7e [[#1790](https://github.com/falcosecurity/falco/pull/1790)] - [@LucaGuerra](https://github.com/LucaGuerra)
 * Add SysFlow to list of libs adopters [[#1747](https://github.com/falcosecurity/falco/pull/1747)] - [@araujof](https://github.com/araujof)
 * build: dropped centos8 circleci build because it is useless [[#1882](https://github.com/falcosecurity/falco/pull/1882)] - [@FedeDP](https://github.com/FedeDP)
@@ -345,8 +345,8 @@ Released on 2021-01-18
 * docs(proposals): Exceptions handling proposal [[#1376](https://github.com/falcosecurity/falco/pull/1376)] - [@mstemm](https://github.com/mstemm)
 * docs: fix a broken link of README [[#1516](https://github.com/falcosecurity/falco/pull/1516)] - [@oke-py](https://github.com/oke-py)
 * docs: adding the kubernetes privileged use case to use cases [[#1484](https://github.com/falcosecurity/falco/pull/1484)] - [@fntlnz](https://github.com/fntlnz)
-* rules(Mkdir binary dirs): Adds exe_running_docker_save as an exception as this rules can be triggerred when a container is created. [[#1386](https://github.com/falcosecurity/falco/pull/1386)] - [@jhwbarlow](https://github.com/jhwbarlow)
-* rules(Create Hidden Files): Adds exe_running_docker_save as an exception as this rules can be triggerred when a container is created. [[#1386](https://github.com/falcosecurity/falco/pull/1386)] - [@jhwbarlow](https://github.com/jhwbarlow)
+* rules(Mkdir binary dirs): Adds exe_running_docker_save as an exception as this rules can be triggered when a container is created. [[#1386](https://github.com/falcosecurity/falco/pull/1386)] - [@jhwbarlow](https://github.com/jhwbarlow)
+* rules(Create Hidden Files): Adds exe_running_docker_save as an exception as this rules can be triggered when a container is created. [[#1386](https://github.com/falcosecurity/falco/pull/1386)] - [@jhwbarlow](https://github.com/jhwbarlow)
 * docs(.circleci): welcome Jonah (Amazon) as a new Falco CI maintainer [[#1518](https://github.com/falcosecurity/falco/pull/1518)] - [@leodido](https://github.com/leodido)
 * build: falcosecurity/falco:master also available on the AWS ECR Public registry [[#1512](https://github.com/falcosecurity/falco/pull/1512)] - [@leodido](https://github.com/leodido)
 * build: falcosecurity/falco:latest also available on the AWS ECR Public registry [[#1512](https://github.com/falcosecurity/falco/pull/1512)] - [@leodido](https://github.com/leodido)
@@ -795,7 +795,7 @@ Released on 2020-01-23
 ### Bug Fixes
 
 * fix: providing clang into docker-builder [[#972](https://github.com/falcosecurity/falco/pull/972)]
-* fix: prevent throwing json type error c++ exceptions outside of the falco engine when procesing k8s audit events. [[#928](https://github.com/falcosecurity/falco/pull/928)]
+* fix: prevent throwing json type error c++ exceptions outside of the falco engine when processing k8s audit events. [[#928](https://github.com/falcosecurity/falco/pull/928)]
 * fix(docker/kernel/linuxkit): correct from for falco minimal image [[#913](https://github.com/falcosecurity/falco/pull/913)]
 
 ### Rule Changes
@@ -910,7 +910,7 @@ Released 2019-07-31
 
 * Fix a problem that would cause prevent container metadata lookups when falco was daemonized [[#731](https://github.com/falcosecurity/falco/pull/731)]
 
-* Allow rule priorites to be expressed as lowercase and a mix of lower/uppercase [[#737](https://github.com/falcosecurity/falco/pull/737)]
+* Allow rule priorities to be expressed as lowercase and a mix of lower/uppercase [[#737](https://github.com/falcosecurity/falco/pull/737)]
 
 ### Rule Changes
 
@@ -1042,7 +1042,7 @@ Released 2019-06-07
 
 * Add instructions for k8s audit support in >= 1.13 [[#608](https://github.com/falcosecurity/falco/pull/608)]
 
-* Fix security issues reported by GitHub on Anchore integration [[#592](https://github.com/falcosecurity/falco/pull/592)]
+* Fix security issues reported by GitHub on Anchor integration [[#592](https://github.com/falcosecurity/falco/pull/592)]
 
 * Several docs/readme improvements [[#620](https://github.com/falcosecurity/falco/pull/620)] [[#616](https://github.com/falcosecurity/falco/pull/616)] [[#631](https://github.com/falcosecurity/falco/pull/631)] [[#639](https://github.com/falcosecurity/falco/pull/639)] [[#642](https://github.com/falcosecurity/falco/pull/642)]
 
@@ -1105,7 +1105,7 @@ Released 2019-05-13
 
 * Docker-based builder/tester: You can now build Falco using the [falco-builder](https://falco.org/docs/source/#build-using-falco-builder-container) docker image, and run regression tests using the [falco-tester](https://falco.org/docs/source/#test-using-falco-tester-container) docker image. [[#522](https://github.com/falcosecurity/falco/pull/522)] [[#584](https://github.com/falcosecurity/falco/pull/584)]
 
-* Several small docs changes to improve clarity and readibility [[#524](https://github.com/falcosecurity/falco/pull/524)] [[#540](https://github.com/falcosecurity/falco/pull/540)] [[#541](https://github.com/falcosecurity/falco/pull/541)] [[#542](https://github.com/falcosecurity/falco/pull/542)]
+* Several small docs changes to improve clarity and readability [[#524](https://github.com/falcosecurity/falco/pull/524)] [[#540](https://github.com/falcosecurity/falco/pull/540)] [[#541](https://github.com/falcosecurity/falco/pull/541)] [[#542](https://github.com/falcosecurity/falco/pull/542)]
 
 * Add instructions on how to enable K8s Audit Logging for kops [[#535](https://github.com/falcosecurity/falco/pull/535)]
 
@@ -1121,7 +1121,7 @@ Released 2019-05-13
 
 ### Rule Changes
 
-* **Tag rules using Mitre Attack Framework**: Add tags for all relevant rules linking them to the [MITRE Attack Framework](https://attack.mitre.org). We have an associated [blog post](https://sysdig.com/blog/mitre-attck-framework-for-container-runtime-security-with-sysdig-falco/). [[#575](https://github.com/falcosecurity/falco/pull/575)] [[#578](https://github.com/falcosecurity/falco/pull/578)]
+* **Tag rules using Mitre Attack Framework**: Add tags for all relevant rules linking them to the [MITRE Attack Framework](https://attack.mitre.org). We have an associated [blog post](https://sysdig.com/blog/mitre-attack-framework-for-container-runtime-security-with-sysdig-falco/). [[#575](https://github.com/falcosecurity/falco/pull/575)] [[#578](https://github.com/falcosecurity/falco/pull/578)]
 
 * New rules for additional use cases: New rules `Schedule Cron Jobs`, `Update Package Repository`, `Remove Bulk Data from Disk`, `Set Setuid or Setgid bit`, `Detect bash history deletion`, `Create Hidden Files or Directories` look for additional common follow-on activity you might see from an attacker. [[#578](https://github.com/falcosecurity/falco/pull/578)] [[#580](https://github.com/falcosecurity/falco/pull/580)]
 
@@ -1220,7 +1220,7 @@ Released 2019-01-16
 
 * Fix FPs related to `apt-config`/`apt-cache`, `apk` [[#490](https://github.com/falcosecurity/falco/pull/490)]
 
-* New rules `Launch Package Management Process in Container`, `Netcat Remote Code Execution in Container`, `Lauch Suspicious Network Tool in Container` look for host-level network tools like `netcat`, package management tools like `apt-get`, or network tool binaries being run in a container. [[#490](https://github.com/falcosecurity/falco/pull/490)]
+* New rules `Launch Package Management Process in Container`, `Netcat Remote Code Execution in Container`, `Launch Suspicious Network Tool in Container` look for host-level network tools like `netcat`, package management tools like `apt-get`, or network tool binaries being run in a container. [[#490](https://github.com/falcosecurity/falco/pull/490)]
 
 * Fix the `inbound` and `outbound` macros so they work with sendto/recvfrom/sendmsg/recvmsg. [[#470](https://github.com/falcosecurity/falco/pull/470)]
 
@@ -1253,7 +1253,7 @@ Released 2018-11-09
 
 * Better coverage (e.g. reduced FPs) for critical stack, hids systems, ufw, cloud-init, etc. [[#445](https://github.com/falcosecurity/falco/pull/445)]
 
-* New rules `Launch Package Management Process in Container`, `Netcat Remote Code Execution in Container`, and `Lauch Suspicious Network Tool in Container` look for running various suspicious programs in a container. [[#461](https://github.com/falcosecurity/falco/pull/461)]
+* New rules `Launch Package Management Process in Container`, `Netcat Remote Code Execution in Container`, and `Launch Suspicious Network Tool in Container` look for running various suspicious programs in a container. [[#461](https://github.com/falcosecurity/falco/pull/461)]
 
 * Misc changes to address false positives in GKE, Istio, etc. [[#455](https://github.com/falcosecurity/falco/pull/455)] [[#439](https://github.com/falcosecurity/falco/issues/439)]
 
@@ -1308,9 +1308,9 @@ Released 2018-07-24
 
 ### Minor Changes
 
-* Rules may now have an `skip-if-unknown-filter` property. If set to true, a rule will be skipped if its condition/output property refers to a filtercheck (e.g. `fd.some-new-attibute`) that is not present in the current falco version. [[#364](https://github.com/draios/falco/pull/364)] [[#345](https://github.com/draios/falco/issues/345)]
+* Rules may now have an `skip-if-unknown-filter` property. If set to true, a rule will be skipped if its condition/output property refers to a filtercheck (e.g. `fd.some-new-attribute`) that is not present in the current falco version. [[#364](https://github.com/draios/falco/pull/364)] [[#345](https://github.com/draios/falco/issues/345)]
 * Small changes to Falco `COPYING` file so github automatically recognizes license [[#380](https://github.com/draios/falco/pull/380)]
-* New example integration showing how to connect Falco with Anchore to dynamically create falco rules based on negative scan results [[#390](https://github.com/draios/falco/pull/390)]
+* New example integration showing how to connect Falco with Anchor to dynamically create falco rules based on negative scan results [[#390](https://github.com/draios/falco/pull/390)]
 * New example integration showing how to connect Falco, [nats](https://nats.io/), and K8s to run flexible "playbooks" based on Falco events [[#389](https://github.com/draios/falco/pull/389)]
 
 ### Bug Fixes
@@ -1409,7 +1409,7 @@ Released 2017-10-10
 
 Released 2017-10-10
 
-**Important**: the location for falco's configuration file has moved from `/etc/falco.yaml` to `/etc/falco/falco.yaml`. The default rules file has moved from `/etc/falco_rules.yaml` to `/etc/falco/falco_rules.yaml`. In addition, 0.8.0 has added a _local_ ruls file to `/etc/falco/falco_rules.local.yaml`. See [the documentation](https://github.com/draios/falco/wiki/Falco-Default-and-Local-Rules-Files) for more details.
+**Important**: the location for falco's configuration file has moved from `/etc/falco.yaml` to `/etc/falco/falco.yaml`. The default rules file has moved from `/etc/falco_rules.yaml` to `/etc/falco/falco_rules.yaml`. In addition, 0.8.0 has added a _local_ rules file to `/etc/falco/falco_rules.local.yaml`. See [the documentation](https://github.com/draios/falco/wiki/Falco-Default-and-Local-Rules-Files) for more details.
 
 ### Major Changes
 
